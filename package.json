@@ -1,0 +1,22 @@
+{
+    "name": "prism",
+    "version": "0.0.1",
+    "description": "Prism Smart Contract",
+    "author": "Prism Developer",
+    "license": "ISC",
+    "main": "truffle.js",
+    "scripts": {
+        "compile": "truffle compile",
+        "migrate": "truffle migrate --network ganache_cli",
+        "test:prism": "truffle compile && truffle test --network ganache_cli ./test/contracts/Prism/*.truffle.js --migrations_directory 0_no_migrations",
+        "test:prism:complete": "truffle compile && truffle test --network ganache_cli ./test/contracts/Prism/prism.truffle.js --migrations_directory 0_no_migrations",
+        "start:ganache": "ganache-cli -m \"nephew apology bacon pelican country escape emerge prepare leave easily wrist wealth\" -h \"localhost\" -p 7545"
+    },
+    "dependencies": {
+        "ethers": "^4.0.36",
+        "mocha": "^6.2.0",
+        "openzeppelin-solidity": "^2.3.0",
+        "truffle-hdwallet-provider": "^1.0.17",
+        "web3": "^1.2.1"
+    }
+}
